@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>2-클래스와아이디</title>
+  <style>
+    .aa{color: green;}
+    .bb{font-weight: bold;}
+    #aa{color:crimson;}
+    #bb{font-weight: bold;}
+
+    .tt{text-align:center;background-color: gold;}
+    .t01{color:crimson;font-weight: bold;}
+    .t02{color: royalblue}
+  </style>
+</head>
+<body>
+
+  <p>이것은 보통 단락입니다.</p>
+  <p class="aa bb">색상이 적용됩니다.</p>
+  <p class="bb">이것은 보통 단락입니다.</p>
+  <p id="aa bb">색상이 적용됩니다.</p> <!-- id는 1개 이상 적용할 수 없음 -->
+  <p id="bb">진하게 표시됩니다.</p> <!--위에서 한번 적용한 id는 다른곳에서 또 적용할 수 없음  -->
+
+<!-- 
+  (1) 한 태그에 클래스는 1개 이상을 적용할 수 있지만, 아이디는 한개만 적용할 수 있음
+  (2) 문서에서도 클래스는 여러개, 아이디는 한개만 가능 : 소스의 가독성
+  예를 들어 .. <태그명 class="클래스1 클래스2"</태그명>
+              <태그명 class="클래스1 클래스2"</태그명> ->(o)
+              <태그명 id="아이디1"></태그명>
+              <태그명 id="아이디1"></태그명> ->(x)
+-->
+
+  <div class="tt">
+    <h1>center태그를 사용한다면...</h1>
+    <p>
+      <span calss="t01">center태그</span>를 사용한다면,<br>
+      <span class="t02">div태그</span>를 이용해서<br>
+      스타일 시트의 text-align을 쓰는 것이 좋습니다.
+    </p>
+  </div>
+
+</body>
+</html>
+
+<!-- 
+  *네이밍규칙(클래스,아이디,변수,함수 등등)
+  -카멜 케이스(Camel Case) - 예)userName
+  -스네이크 케이스(Snake Case) - 예)user_name
+  -케밥케이스(Kebab Case) - 예)user-name
+  -파스칼 케이스(Pascal Case) - 예)UserName
+  -->
